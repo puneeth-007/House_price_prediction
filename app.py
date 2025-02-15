@@ -3,9 +3,6 @@ import pandas as pd
 import numpy as np
 import pickle
 import matplotlib.pyplot as plt
-import plotly.express as px
-
-dfo=pd.read_csv(r'C:\Users\punee\OneDrive\Desktop\python\Machinelearning\project1_house_price_prediction\housing_price_dataset.csv')
 
 st.markdown(
     '<h1 style="text-align: center; color: white;">House Price Prediction App</h1>',unsafe_allow_html=True
