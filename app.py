@@ -8,11 +8,11 @@ st.markdown(
     '<h1 style="text-align: center; color: white;">House Price Prediction App</h1>',unsafe_allow_html=True
 )
 
-with open ( r'C:\Users\punee\OneDrive\Desktop\python\Machinelearning\project1_house_price_prediction\dt.pkl','rb') as f:
+with open ( r'dt.pkl','rb') as f:
     dt=pickle.load(f)
-with open(r'C:\Users\punee\OneDrive\Desktop\python\Machinelearning\project1_house_price_prediction\lr.pkl','rb') as f:
+with open(r'lr.pkl','rb') as f:
     lr=pickle.load(f)
-with open(r'C:\Users\punee\OneDrive\Desktop\python\Machinelearning\project1_house_price_prediction\kn.pkl','rb') as f:
+with open(r'kn.pkl','rb') as f:
     kn=pickle.load(f)
 
 #['SquareFeet', 'Bedrooms', 'Bathrooms', 'Neighborhood', 'YearBuilt','Price'],
@@ -39,9 +39,3 @@ if st.button('Predict'):
     st.write('Linear Regression Prediction (More accurate): ',round(lr_pred[0],2))
     st.write('KNN Prediction: ',round(kn_pred[0],2))
     st.write('Decision Tree Prediction: ',round(dt_pred[0],2))
-
-enable = st.checkbox("Enable camera")
-picture = st.camera_input("Take a picture", disabled=not enable)
-
-if picture:
-    st.image(picture)
